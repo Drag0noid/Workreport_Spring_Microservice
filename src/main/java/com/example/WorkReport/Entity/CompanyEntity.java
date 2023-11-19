@@ -19,10 +19,10 @@ public class CompanyEntity {
     private BigInteger id;
     private String name;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "companies")
-    private List<OfficeEntity> offices;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "company_office")
+    private List<OfficeEntity> office;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "employee1")
+  @OneToMany(cascade = CascadeType.ALL, mappedBy = "employee_company")
     private List<EmployeeEntity> employee;
 
     public CompanyEntity() {

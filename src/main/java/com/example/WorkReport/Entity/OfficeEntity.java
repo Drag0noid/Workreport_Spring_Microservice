@@ -21,9 +21,9 @@ public class OfficeEntity {
 
     @ManyToOne
     @JoinColumn(name = "company_id")
-    private CompanyEntity companies;
+    private CompanyEntity company_office;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "employees")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "employee_office")
     private List<EmployeeEntity> employee;
 
     public OfficeEntity() {

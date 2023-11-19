@@ -19,18 +19,25 @@ public class EmployeeEntity {
     private String surname;
     private Date birthdate;
     private String email;
+
+    @Column(name = "job_title")
     private String jobtitle;
+
     private Integer salary;
-    private Date startdate;
+
+    @Column(name = "start_date")
+    private Date start_date;
+
+    @Column(name = "end_date")
     private Date enddate;
 
     @ManyToOne
     @JoinColumn(name = "company_id")
-    private CompanyEntity employee1;
+    private CompanyEntity employee_company;
 
     @ManyToOne
     @JoinColumn(name = "office_id")
-    private OfficeEntity employees;
+    private OfficeEntity employee_office;
 
     public EmployeeEntity() {
     }
